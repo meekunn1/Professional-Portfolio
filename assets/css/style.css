@@ -34,26 +34,85 @@
     padding: 10px;
 }
 
-.card{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1 1 200px;
+[class*="card-"]{
+    /* display: flex;
+    justify-content: flex-start;
+    align-items: flex-end; */
     padding: 0px;
     margin: 10px;
     border: solid black 5px;
-    background-image: url(../photos/pexels-eva-bronzini-6475578_crop.jpg); 
-    background-position: 0 -50px; 
     width: 400px; 
     height: 400px;
-}
-.card-title{
-background-color:white ;
+    flex: 1 1 400px;
+    position: relative;
 }
 
-.background-image{
+.top-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 10px;
+    border: solid black 5px;
+    width: 100%; 
+    height: 400px;
+    background-image: url(../photos/pexels-eva-bronzini-6475578_crop.jpg); 
+    background-size: cover;
+    background-position: bottom left; 
+    background-repeat: no-repeat;
     position: relative;
-    object-fit: fill;
-width: 100%;
-height: 100%;
+}
+
+.card-2{
+    background-image: url(../photos/pexels-daniel-smyth-8956313.jpg); 
+    background-size: cover;
+    background-position: bottom left; 
+    background-repeat: no-repeat;
+}
+
+.card-3{
+    background-image: url(../photos/pexels-tima-miroshnichenko-6791495.jpg); 
+    background-size: cover;
+    background-position: bottom left; 
+    background-repeat: no-repeat;
+}
+
+.card-4{
+    background-image: url(../photos/pexels-tima-miroshnichenko-5845914.jpg); 
+    background-size: cover;
+    background-position: bottom left; 
+    background-repeat: no-repeat;
+}
+
+.card-5{
+    background-image: url(../photos/pexels-khunkorn-laowisit-5233262.jpg); 
+    background-size: cover;
+    background-position: bottom left; 
+    background-repeat: no-repeat;
+}
+
+
+.title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* align-self: flex-start;
+    order: 1; */
+    background-color: white ;
+    padding: 10px 20px;
+    margin: 0px;
+}
+
+.flex-box p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* justify-content: center;
+    align-self: center; */
+    background-color: yellow;
+    border: dashed black 5px;
+    padding: 10px;
+    visibility: visible;
 }

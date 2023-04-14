@@ -1,5 +1,10 @@
 :root {
     --shadow: rgba(0,0,0,.2);
+    --project-BG: antiquewhite;
+    --project-border: lightblue;
+    --header-BG:lightgreen;
+    --header-border:lightcoral;
+
   }
 
 *{
@@ -20,8 +25,8 @@ h3{
 }
 
 .top-bar{
-    border: solid lightcoral;
-    background-color: lightgreen;
+    border: solid var(--header-border);
+    background-color: var(--header-BG);
     text-align: center;
 }
 
@@ -70,8 +75,8 @@ h3{
     align-self: center;
     width: 75%;
     text-align: center;
-    background-color: pink;
-    border: solid tan;
+    background-color: var(--project-BG);
+    border: solid var(--project-border);
     margin: 0px;
     visibility: visible;
 }
@@ -163,8 +168,8 @@ span[wip-message]:hover::after {
     left: 0;
     top: 50%;
     padding: 10px;
-    border: solid lightblue;
-    background-color: antiquewhite;
+    border: solid var(--project-border);
+    background-color: var(--project-BG);
     width:180px;
     text-align: end;
     visibility: hidden;
@@ -195,9 +200,10 @@ span[wip-message]:hover::after {
 #contact-me{
     display: flex;
     flex-direction: column;
-    border: solid black;
+    border: solid var(--header-border);
     padding: 0 15px 20px 10px;
     justify-content: space-between;
+    background-color: var(--header-BG);
 }
 
 #contact-me ul{

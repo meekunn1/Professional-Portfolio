@@ -1,3 +1,4 @@
+
 .top-bar{
     border: solid lightcoral;
     background-color: lightgreen;
@@ -25,7 +26,7 @@
     background-color: lightcyan;
 }
 
-.about-me{
+#about-me{
     background-color: lightgrey;
     color: black;
     padding: 10px;
@@ -40,7 +41,7 @@
     padding: 10px;
 }
 
-.flex-container{
+#projects{
     display: flex;
     flex-direction: column;
 }
@@ -83,6 +84,7 @@
     background-position: bottom left; 
     background-repeat: no-repeat;
     position: relative;
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,.2);
 }
 
 .card-2{
@@ -157,7 +159,7 @@
     .flex-nav{
         justify-content: flex-end;
     }
-    .flex-container{
+    #projects{
         flex-direction: row;
         justify-content: space-between;
     }
@@ -182,5 +184,13 @@
     .aside-test{
         visibility: visible;
     }
+
+    }
+
+    .top-card:hover{
+        box-shadow: inset 0 0 0 400px rgba(0,0,0,0);
+    }
+
+    .top-card:focus{
 
     }

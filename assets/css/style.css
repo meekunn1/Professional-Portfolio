@@ -88,6 +88,25 @@ h3{
     flex: 1 1 400px;
     position: relative;
 }
+span[wip-message]{
+    position: relative;
+}
+
+span[wip-message]:hover::after {
+    content: attr(wip-message);
+    position: absolute;
+    left: -100px;
+    bottom: 30px;
+    min-width: 150px;
+    background-color:yellow;
+    border: dashed black;
+    border-radius: 10px;
+    padding: 5px;
+    color: black;
+    font-size: 90%;
+    z-index: 1;
+    box-shadow: 5px 5px 5px gray;
+}
 
 .top-card{
     display: flex;
@@ -167,8 +186,6 @@ h3{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* justify-content: center;
-    align-self: center; */
     background-color: yellow;
     border: dashed black 5px;
     padding: 10px;
@@ -176,16 +193,28 @@ h3{
 }
 
 #contact-me{
+    display: flex;
+    flex-direction: column;
     border: solid black;
-    padding: 0 10px;
+    padding: 0 15px 20px 10px;
+    justify-content: space-between;
+}
+
+#contact-me ul{
+    align-self: flex-end;
+    right: 0;
+    list-style: none;
+}
+
+#contact-me li{
+    font-size: 120%
 }
 
 .hover:hover{
     box-shadow: inset 0 0 0 400px rgba(0,0,0,0);
 }
-
-.focus:focus{
-
+.hover:hover p{
+    display: none;
 }
 
 @media screen and (min-width: 780px){

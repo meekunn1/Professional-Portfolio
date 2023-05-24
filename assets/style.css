@@ -1,0 +1,263 @@
+:root {
+    --shadow: rgba(0,0,0,.2);
+    --project-BG: antiquewhite;
+    --project-border: lightblue;
+    --header-BG:lightgreen;
+    --header-border:lightcoral;
+
+  }
+
+*{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+h1{
+    font-size: 250%;
+}
+
+h2{
+    font-size: 175%;
+}
+
+h3{
+    font-size: 150%;
+}
+
+.top-bar{
+    border: solid var(--header-border);
+    background-color: var(--header-BG);
+    text-align: center;
+}
+
+.top-bar h1{
+    padding: 0px 20px;
+}
+
+.flex-nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: aqua;
+    border-top: solid darkblue;
+    border-bottom: solid darkblue;
+}
+
+.flex-nav li{
+    list-style: none;
+    padding: 5px 15px;
+    margin: 10px;
+    border: solid orange;
+    border-radius: 10px;
+    background-color: lightcyan;
+}
+
+#about-me{
+    background-color: lightgrey;
+    color: black;
+    padding: 10px;
+}
+
+.flex-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+#projects{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-aside{
+    align-self: center;
+    width: 75%;
+    text-align: center;
+    background-color: var(--project-BG);
+    border: solid var(--project-border);
+    margin: 0px;
+    visibility: visible;
+}
+
+[class*="card-"]{
+    padding: 0px;
+    margin: 10px 50px;
+    border: solid black 5px;
+    width: 400px; 
+    height: 350px;
+    flex: 1 1 400px;
+    position: relative;
+}
+span[wip-message]{
+    position: relative;
+}
+
+span[wip-message]:hover::after {
+    content: attr(wip-message);
+    position: absolute;
+    left: -100px;
+    bottom: 30px;
+    min-width: 150px;
+    background-color:yellow;
+    border: dashed black;
+    border-radius: 10px;
+    padding: 5px;
+    color: black;
+    font-size: 90%;
+    z-index: 1;
+    box-shadow: 5px 5px 5px gray;
+}
+
+.top-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    margin: 10px;
+    border: solid black 5px;
+    width: 100%; 
+    height: 400px;
+    background-image: url(photos/placeHolders/pexels-eva-bronzini-6475578_crop.jpg); 
+    background-size: cover;
+    background-position: bottom left; 
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: inset 0 0 0 1000px var(--shadow);
+}
+
+.card-2{
+    background-image: url(photos/placeHolders/pexels-daniel-smyth-8956313.jpg); 
+    background-size: cover;
+    background-position: bottom left; 
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px var(--shadow);
+}
+
+.card-3{
+    background-image: url(photos/placeHolders/pexels-tima-miroshnichenko-6791495.jpg); 
+    background-size: cover;
+    background-position: bottom left; 
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px var(--shadow);
+}
+
+.card-4{
+    background-image: url(photos/placeHolders/pexels-tima-miroshnichenko-5845914.jpg); 
+    background-size: cover;
+    background-position: bottom left; 
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px var(--shadow);
+}
+
+.card-5{
+    background-image: url(photos/placeHolders/pexels-khunkorn-laowisit-5233262.jpg); 
+    background-size: cover;
+    background-position: bottom left; 
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 1000px var(--shadow);
+}
+
+.aside-test{
+    position: fixed;
+    left: 0;
+    top: 50%;
+    padding: 10px;
+    border: solid var(--project-border);
+    background-color: var(--project-BG);
+    width:180px;
+    text-align: end;
+    visibility: hidden;
+}
+
+.title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* align-self: flex-start;
+    order: 1; */
+    background-color: var(--project-BG) ;
+    padding: 10px 20px;
+    margin: 0px;
+}
+
+.flex-box p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: yellow;
+    border: dashed black 5px;
+    padding: 10px;
+    visibility: visible;
+}
+
+#contact-me{
+    display: flex;
+    flex-direction: column;
+    border: solid var(--header-border);
+    padding: 0 15px 20px 10px;
+    justify-content: space-between;
+    background-color: var(--header-BG);
+}
+
+#contact-me ul{
+    align-self: flex-end;
+    right: 0;
+    list-style: none;
+}
+
+#contact-me li{
+    font-size: 120%
+}
+
+.hover:hover{
+    box-shadow: inset 0 0 0 400px rgba(0,0,0,0);
+}
+
+.hover:hover p{
+    display: none;
+}
+
+#project1:hover{
+    background-image: url(photos/mealMatch/demo.gif);
+}
+
+@media screen and (min-width: 780px){
+    .top-bar{
+        text-align: left;
+    }
+
+    .flex-nav{
+        justify-content: flex-end;
+    }
+    #projects{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .flex-aside{
+        align-self: flex-start;
+        margin-top: 100px;
+        flex: 0 0 200px;
+        visibility: hidden;
+    }
+    .top-card{
+        width: 80%;
+        flex: 0 0 100%;
+    }
+    .flex-box{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    [class*="card-"]{
+        flex: 1 1 350px;
+        margin: 20px;
+    }
+    .aside-test{
+        visibility: visible;
+    }
+
+    }
